@@ -1,3 +1,3 @@
-# lokivents-website
+# Loki Events Website
 
-Keeping the website safe
+The front-end of the most awesome event app ever.
