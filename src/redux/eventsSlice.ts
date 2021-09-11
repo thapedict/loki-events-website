@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { IEventsState } from "../Types";
 import store from "./store";
 
@@ -12,15 +12,15 @@ const eventsSlice = createSlice({
     name: 'events',
     initialState,
     reducers: {
-        getEvents: (state) => {
+        getEvents: (state: IEventsState) => {
             state.loading = true;
         },
-        getEventsSuccess: (state, { payload }) => {
+        getEventsSuccess: (state: IEventsState, { payload }) => {
             state.events = payload;
             state.loading = false;
             state.hasErrors = false;
         },
-        getEventsFailure: (state) => {
+        getEventsFailure: (state: IEventsState) => {
             state.loading = false;
             state.hasErrors = true;
         }
@@ -34,7 +34,7 @@ export const eventsSelector = (state: IEventsState) => state;
 export default eventsSlice.reducer;
 
 export function fetchEvents() {
-    return async (dispatch:typeof store.dispatch) => {
+    return async (dispatch: typeof store.dispatch) => {
         dispatch(getEvents())
 
         try {
@@ -45,7 +45,7 @@ export function fetchEvents() {
         } catch (err) {
             dispatch(getEventsFailure());
             console.log('Error:', err);
-            
+
         }
     }
 }
