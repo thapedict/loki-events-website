@@ -1,8 +1,9 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import { IEvent } from "../Types";
 
 
-export default function App() {
+export default function App(props: {events?:IEvent[]}) {
     const defaultProps = {
         center: {
             lat: -25.747868,

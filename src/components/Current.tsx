@@ -39,7 +39,7 @@ function Current() {
                             })
                         }                        
                     </div>
-                    <GMap />
+                    <GMap events={events} />
                 </div>
             </div>
         </section>)
