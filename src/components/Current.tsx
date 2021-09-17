@@ -31,9 +31,10 @@ function Current() {
                 <div id="current-wrap" className="ts-dl-1-3">
                     <div className="event-loop">
                         {
-                            events.map(event => {
+                            events.map((event,index) => {
+                                index++;
                                 return (<div key={event.eventID}>
-                                    <h5 className="title">{event.title}</h5>
+                                    <h5 className="title">{index}. {event.title}</h5>
                                     <span className="address">{event.address.street}</span>
                                 </div>)
                             })
