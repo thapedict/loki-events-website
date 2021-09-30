@@ -87,6 +87,7 @@ section#current #current-wrap > * {
 section#subscribe {
     background-color: #607D8B;
     color: #fff;
+    padding: 1.5em 1em;
 }
 
 section#subscribe form {
