@@ -24,3 +24,18 @@ export interface IEventsState {
     hasErrors: boolean,
     events: IEvent[]
 }
+
+export interface IDateObject {
+    day: number,
+    month: number,
+    year: number,
+    names: {
+        day: string,
+        dayAbbr: string,
+        month: string,
+        monthAbbr: string
+    },
+    hours: number,
+    minutes: number,
+    seconds: number
+}
